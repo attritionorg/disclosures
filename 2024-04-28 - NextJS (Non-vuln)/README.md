@@ -1,3 +1,6 @@
+# NextJS Open Redirect Functionality
+
+## Description
 
 On April 17, 2024, I caught a request to my web server to the /_next/image endpoint, which is not something we use. Based on a Google search, I determined this was likely a request for a [component / endpoint of NextJS](https://nextjs.org/docs/pages/api-reference/components/image). I reached out to Vercel, the vendor, to report what appears to be an open redirect weakness:
 
