@@ -65,8 +65,7 @@ II. Get hold of system 7.5 utilities disk (only 7.5 because it's garunteed
     you were there.
 
 
-
-        Well, it's pretty easy. The old network at my school used to use
+        Well, it's pretty easy. The old network at my school used to use 
 Mac Classics.
         Look on the left hand side of the case. There will be two
 buttons. The one closest to you is 'reset'. The seocond one is the
