@@ -66,13 +66,13 @@ II. Get hold of system 7.5 utilities disk (only 7.5 because it's garunteed
 
 
 **Well, it's pretty easy. The old network at my school used to use 
-Mac Classics.
+Mac Classics.**
 
-Look on the left hand side of the case. There will be two
+**Look on the left hand side of the case. There will be two
 buttons. The one closest to you is 'reset'. The seocond one is the
-programmers box. Hit it.
+programmers box. Hit it.**
 
-Now, if you are in At Ease, just type 'G FINDER', exactly. It
+**Now, if you are in At Ease, just type 'G FINDER', exactly. It
 will exit whatever shell it is in and hop to the finder. While there do
 whatever you want. I suggest thrashing some system files and then
 slapping on a keygrabber. When the netadmin comes to fix it you can just
