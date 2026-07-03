@@ -1,0 +1,19 @@
+I'm including this because buffer overflows in su were common for early *nix flavors. 
+At some point when I get to more historical digging I will pull up a better reference that dates this in the early to mid 90s.
+This likely impacts earlier versions of Solaris / SunOS.
+I used Microsoft Copilot to examine the Solaris 2.2 source for "su.c".
+Since these are user-controlled variables it matches my memory of those exploits and I have personal knowledge of using them on SunOS / Solaris.
+
+
+Buffer Overflow in Environment Variable Concatenation (Lines 170-177)
+C
+strcat(homedir, dir);           // homedir is 64 bytes: "HOME="
+strcat(logname, name);          // logname is 20 bytes: "LOGNAME="
+strcat(termtyp, term);          // termtyp is 20 bytes: "TERM="
+strcat(hzname, hz);             // hzname is 10 bytes: "HZ="
+strcat(tznam, tz);              // tznam is 15 bytes: "TZ="
+Issue: These buffers are severely undersized. A user with a long home directory, username, or environment variable can overflow.
+
+Impact: Stack buffer overflow → arbitrary code execution.
+
+Fix: Use dynamic allocation or snprintf() with size checks.
