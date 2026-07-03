@@ -1,0 +1,9 @@
+Using Microsoft Copilot to audit Solaris 2.2 su.c source:
+
+Weak Password Comparison (Line 162)
+
+if((strcmp(sp->sp_pwdp, crypt(password, sp->sp_pwdp)) != 0)) {
+
+Issue: Uses strcmp() for cryptographic comparison, which is vulnerable to timing attacks. An attacker can measure response time to infer the correct password prefix.
+Impact: Password brute-force attacks could be accelerated.
+Fix: Use constant-time comparison (e.g., memcmp() or a secure comparison function).
